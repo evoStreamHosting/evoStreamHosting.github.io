@@ -9,7 +9,7 @@ var options = {
         channel: currentStream, 
         muted: true,       
     };//variables
-
+var twitchURL = '<script src="http://player.twitch.tv/js/embed/v1.js"></script><div id="{PLAYER_DIV_ID}"></div>FUCKS SAKE YOU SHITTY LITTLE THING. FUCK THIS SHIT!!!!!';
 
 $(document).ready(function (){
     var player = new Twitch.Player("{PLAYER_DIV_ID}", options);
@@ -18,8 +18,10 @@ $(document).ready(function (){
 
 
 $(window).resize(function(){
-    $("#twitchStream").empty();
+    $("#twitchStream").html('');
     options.width = $("#twitchStream").width();
     options.height = options.width * (9 / 16);
-    $("#twitchStream").load('twitchDiv.html');
+    $.ajax({url: "twitchDiv.txt", success: function(result){
+            $("#twitchStream").html(result);
+        }});
 })
