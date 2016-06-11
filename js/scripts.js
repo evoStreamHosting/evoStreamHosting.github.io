@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+var streamList = ["guardsmanBoB", "Monstercat", "streamerHouse", "SaltyBet"];
+
+
+
+
+$(document).ready(
+});
+=======
 var streamList = ["guardsmanBoB", "Monstercat", "streamerHouse", "SaltyBet"];
 var currentStream = streamList[3]; //TODO <--- clicked item on TwitchAPI list, for now, set to Saltybet
 var twitchWidth = $("#twitchStream").width();
@@ -23,3 +32,4 @@ $(window).resize(function(){
     options.height = options.width * (9 / 16);
     $("#twitchStream").show();
 })
+>>>>>>> master
